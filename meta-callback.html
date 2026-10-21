@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Conectando con Órbita…</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  // Meta (live mode) only accepts public https redirect URIs. This page forwards the authorization
+  // response (code + state) to the Órbita instance running on this computer.
+  var target = 'http://localhost:8787/api/oauth/meta/callback' + window.location.search;
+  window.location.replace(target);
+</script>
+</head>
+<body><main>
+<h1>Conectando con Órbita…</h1>
+<p>Si no se abre automáticamente, comprueba que Órbita está en marcha en este ordenador y <a id="go" href="#">pulsa aquí</a>.</p>
+<script>document.getElementById('go').href = 'http://localhost:8787/api/oauth/meta/callback' + window.location.search;</script>
+</main></body></html>
